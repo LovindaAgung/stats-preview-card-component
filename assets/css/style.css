@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-content {
-	padding: 4em;
+	padding: 2.5em 2em;
 }
 
 .card-content h1 {
@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 		border-bottom-right-radius: inherit;
 	}
 	.card-content {
-		padding: 2.5em 2em;
+		padding: 4em;
 		order: 1;
 	}
 	.card .stat-wrapper {
