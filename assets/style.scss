@@ -92,8 +92,12 @@ h1,h2,h3,h4,h5,h6{
             border-bottom-right-radius: inherit;
         }
         &-content{
-            padding: 4em;
+            padding: 5em;
             order:1;
+
+            .stat{
+                padding-bottom: unset;
+            }
         }
 
         .stat-wrapper{
