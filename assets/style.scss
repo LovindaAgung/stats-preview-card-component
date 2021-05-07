@@ -1,0 +1,106 @@
+@import "color";
+
+:root{
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background: var(--background);
+    position: relative;
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--clr-white-primary);
+    line-height: 1.3;
+    margin-top: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: 2em auto;
+}
+
+.clr-purple{
+    color: var(--clr-purple);
+}
+.attribution{
+    background: var(--clr-white-secondary-300);
+    padding: .5em 1em;
+    position: sticky;
+    bottom:0;
+    left: 0;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    margin:0 1em;
+    border-radius: 8px;
+    background: var(--clr-dark-blue);
+    color: var(--clr-white-secondary-400);
+    text-align: center;
+
+    &-header{
+        width: 100%;
+        height: 250px;
+        background: url(/images/image-header-mobile.jpg) center center/cover, var(--clr-purple);
+        background-blend-mode: overlay;
+        filter: brightness(0.7);
+        border-radius: inherit;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    &-content{
+        padding:2.5em 2em;
+        h1{
+            font-size: 1.7em;
+        }
+        p{
+            line-height: 1.5;
+            padding-bottom: 1em;
+        }
+
+        .stat{
+            color: var(--clr-white-secondary-300);
+            padding-bottom: 2em;
+            text-transform: uppercase;
+            letter-spacing: 1.3px;
+            flex: 1 1 110px;
+
+            h1{
+                margin:0 0 10px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 376px){
+    .container{
+        max-width: 1000px;
+    }
+    .card{
+        flex-direction: row;
+        text-align: left;
+
+        &-header{
+			height: unset;
+            order: 2;
+            border-top-left-radius: 0;
+            border-bottom-right-radius: inherit;
+        }
+        &-content{
+            order:1;
+        }
+
+        .stat-wrapper{
+            display: flex;
+            flex-direction: row;
+            gap:10px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+}
